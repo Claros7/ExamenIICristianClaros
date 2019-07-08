@@ -5,8 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenIICristianClaros"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Genisys" Height="550" Width="400" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" >
     <Grid>
-        <TextBlock>CristianClaros</TextBlock>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!--area de trabajo-->
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#0B7DE0">
+                <!--Barra superior-->
+                <Label FontFamily="Work Sans" Foreground="White" FontStretch="ExtraExpanded" Margin="10,5,210,0" Content="Genisys"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <!--Area de trabajo-->
+                <Grid.ColumnDefinitions>
+                    <!--Definicion de las columnas-->
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <!--Definicion de filas Grid0-->
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="0"/>
+                        <RowDefinition Height="280"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Background="AntiqueWhite">
+                        <!--Titulo-->
+                        <Label  FontSize="20" FontWeight="Bold" Content="Usuario" Margin="157,10,157,-0.4" FontFamily="Work Sans"/>
+                    </Grid>
+
+                    <Grid Background="#0BD9E0" Margin="0,50,0,-190" Grid.RowSpan="3">
+                        <!--panel de registro-->
+                        <Label FontFamily="Work Sans" Content="Nombres" HorizontalAlignment="Left" Margin="28,11,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtNombres" HorizontalAlignment="Left" Height="23" Margin="202,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                        <Label FontFamily="Work Sans" Content="Apellidos" HorizontalAlignment="Left" Margin="28,56,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtApellidos" HorizontalAlignment="Left" Height="23" Margin="202,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                        <Label FontFamily="Work Sans" Content="Nombre De Usuario" HorizontalAlignment="Left" Margin="28,101,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtNombreDeUsuario" HorizontalAlignment="Left" Height="23" Margin="202,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                        <Label FontFamily="Work Sans" Content="Contraseña" HorizontalAlignment="Left" Margin="28,146,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtContraseña" HorizontalAlignment="Left" Height="23" Margin="202,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                        <Label FontFamily="Work Sans" Content="Correo Electronico" HorizontalAlignment="Left" Margin="28,194,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtCorreoElectronico" HorizontalAlignment="Left" Height="23" Margin="202,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                        <Label FontFamily="Work Sans" Content="Fecha De Creación" HorizontalAlignment="Left" Margin="28,242,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtFechaDeCreacion" HorizontalAlignment="Left" Height="23" Margin="202,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                        <Label FontFamily="Work Sans" Content="Última Conexión" HorizontalAlignment="Left" Margin="28,290,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="txtUltimaConexion" HorizontalAlignment="Left" Height="23" Margin="202,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+
+                        <Label FontFamily="Work Sans" Content="Tipo De Usuario" HorizontalAlignment="Left" Margin="28,338,0,0" VerticalAlignment="Top"/>
+                        <ComboBox Name="cmbTipoUsuario" HorizontalAlignment="Left" Margin="202,338,0,0" VerticalAlignment="Top" Width="162">
+                            <ComboBoxItem>Regular</ComboBoxItem>
+                            <ComboBoxItem>Administrador</ComboBoxItem>
+                            <ComboBoxItem>Superusuario</ComboBoxItem>
+
+
+
+                            <Grid></Grid>
+
+                        </ComboBox>
+                        <Label FontFamily="Work Sans" Content="Estado" HorizontalAlignment="Left" Margin="28,386,0,0" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="cmbEstado" HorizontalAlignment="Left" Margin="202,388,0,0" VerticalAlignment="Top" Width="162">
+                            <ComboBoxItem Content="Activo"/>
+                            <ComboBoxItem Content="Inactivo"/>
+
+                            <Grid/>
+
+                        </ComboBox>
+                        <Button Content="Agregar" HorizontalAlignment="Left" Margin="50,432,0,0" VerticalAlignment="Top" Width="76" Height="30" Background="AntiqueWhite"/>
+                        <Button Content="Modificar" HorizontalAlignment="Left" Margin="162,432,0,0" VerticalAlignment="Top" Width="73" Height="30" Background="AntiqueWhite"/>
+                        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="275,432,0,0" VerticalAlignment="Top" Width="73" Height="30" Background="AntiqueWhite"/>
+                        <!--<Button Name="btnSalir" Background="#002AA5" Foreground="White" Content="Aceptar" HorizontalAlignment="Left" Margin="73,130,0,0" VerticalAlignment="Top" Width="91" Height="33" Click="Aceptar"/>
+                        <Button x:Name="btnCancelar" Background="#002AA5" Foreground="White" Content="Cancelar" HorizontalAlignment="Left" Margin="232,130,0,0" VerticalAlignment="Top" Width="91" Height="33" Click="Cancelar" RenderTransformOrigin="0.299,-0.037"/>
+                        -->
+                    </Grid>
+
+                    <!--Muestra los datos-->
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
+
